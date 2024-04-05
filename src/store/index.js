@@ -4,7 +4,11 @@ import mutations from "./mutations.js";
 import actions from "./actions.js";
 
 const store = createStore({
-  state: {},
+  state: {
+    todos: [],
+    singleTodo: {},
+    message: null,
+  },
   getters,
   mutations,
   actions,

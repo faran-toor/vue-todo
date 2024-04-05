@@ -15,37 +15,19 @@
             >Log In</router-link
           >
         </p>
-        <form
-          action="#"
-          method="POST"
-          class="mt-8"
-        >
-          <div class="space-y-5">
-            <base-input
-              :lebal="'Enter Email'"
-              :inputPlaceholder="'Email'"
-              :type="'email'"
-            ></base-input>
-            <base-input
-              :lebal="'Enter Password'"
-              :inputPlaceholder="'Password'"
-              :type="'password'"
-            ></base-input>
-            <base-input
-              :lebal="'Confirm Password'"
-              :inputPlaceholder="'Confirm Password'"
-              :type="'password'"
-            ></base-input>
-            <base-button :title="'Submit'"></base-button>
-          </div>
-        </form>
+        <auth-form></auth-form>
       </div>
     </div>
   </section>
 </template>
 
 <script>
-export default {};
+import authForm from "../components/authForm.vue";
+export default {
+  components: {
+    authForm,
+  },
+};
 </script>
 
 <style></style>

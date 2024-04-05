@@ -1,5 +1,5 @@
 <template>
-  <section class="rounded-md bg-black/70 p-2">
+  <section class="rounded-md bg-black/70 p-2 w-2/4 m-auto">
     <div
       class="flex items-center justify-center bg-white px-4 py-10 sm:px-6 sm:py-16 lg:px-8"
     >
@@ -15,35 +15,24 @@
             >Create a free account</router-link
           >
         </p>
-        <form
-          @submit.prevent="submitForm"
-          method="POST"
-          class="mt-8"
-        >
-          <div class="space-y-5">
-            <base-input
-              :lebal="'Enter Email'"
-              :inputPlaceholder="'Email'"
-              :type="'email'"
-            ></base-input>
-            <base-input
-              :lebal="'Enter Password'"
-              :inputPlaceholder="'Password'"
-              :type="'password'"
-            ></base-input>
-            <base-button :title="'Login'"></base-button>
-          </div>
-        </form>
+        <auth-form></auth-form>
       </div>
     </div>
   </section>
 </template>
 
 <script>
+import authForm from "../components/authForm.vue";
 export default {
+  components: {
+    authForm,
+  },
   methods: {
     submitForm() {},
   },
+  // created() {
+  //   console.log(this.$route.path);
+  // },
 };
 </script>
 
